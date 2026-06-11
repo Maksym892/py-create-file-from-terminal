@@ -40,5 +40,6 @@ def main() -> None:
             for i, content in enumerate(content_lines, start=1):
                 file.write(f"{i} {content}\n")
 
+
 if __name__ == "__main__":
     main()
