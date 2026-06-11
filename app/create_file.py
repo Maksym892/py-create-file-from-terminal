@@ -20,7 +20,7 @@ def main() -> None:
             folders = sys.argv[d_index + 1: f_index]
             print("Folders: ", folders)
         else:
-            folders = sys.argv[d_index + 1: ]
+            folders = sys.argv[d_index + 1:]
             print("Folders: ", folders)
         folder_path = os.path.join(*folders)
         os.makedirs(folder_path, exist_ok=True)
