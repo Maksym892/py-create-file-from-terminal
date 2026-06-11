@@ -15,7 +15,7 @@ def main() -> None:
 
     if "-d" in sys.argv:
         d_index = sys.argv.index("-d")
-        if "-f" in sys.argv:
+        if "-f" in sys.argv and sys.argv.index("-f") > d_index:
             f_index = sys.argv.index("-f")
             folders = sys.argv[d_index + 1: f_index]
             print("Folders: ", folders)
@@ -39,7 +39,6 @@ def main() -> None:
             file.write(f"{timestamp}\n")
             for i, content in enumerate(content_lines, start=1):
                 file.write(f"{i} {content}\n")
-
 
 if __name__ == "__main__":
     main()
