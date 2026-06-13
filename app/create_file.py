@@ -33,6 +33,7 @@ def main() -> None:
             content_lines.append(user_input)
         write_to_file(final_path, content_lines)
 
+
 def write_to_file(file_path: str, lines: list) -> None:
     file_exists = os.path.exists(file_path)
     with open(file_path, "a") as file:
@@ -44,6 +45,7 @@ def write_to_file(file_path: str, lines: list) -> None:
 
         for i, line in enumerate(lines, start=1):
             file.write(f"{i} {line}\n")
+
 
 if __name__ == "__main__":
     main()
